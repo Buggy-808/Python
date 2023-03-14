@@ -17,7 +17,7 @@ while True:
         for ch in range(n):
             character = message[ch]
             location = SYMBOLS.find(character)
-            new_location = (location + distance) % 127
+            new_location = (location + distance) %len(SYMBOLS)
             code += SYMBOLS[new_location]
         print(code)
         break
@@ -26,7 +26,7 @@ while True:
         for ch in range(n):
             character = message[ch]
             location = SYMBOLS.find(character)
-            new_location = (location - distance) % 127
+            new_location = (location - distance) %len(SYMBOLS)
             text += SYMBOLS[new_location]
         print(text)
         break
